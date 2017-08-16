@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'MainPageController@index',
+	'as' => 'main_page'
+	]);
+
+// Auth
+
+Route::get('registration', [
+	'uses' => 'AuthController@registration',
+	'as' => 'registration'
+	]);
