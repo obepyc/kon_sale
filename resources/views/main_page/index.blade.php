@@ -9,7 +9,8 @@
 <header>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-push-1">
+			
+			<div @if(!empty(Auth::user())) class="col-md-12" @else class="col-md-6 col-md-push-1" @endif }}>
 				<div class="slogan">
 					<h1>
 						Бесплатное размещение<br>
@@ -18,6 +19,9 @@
 					</h1>
 				</div>
 			</div>
+
+			@if(empty(Auth::user()))
+
 			<div class="col-md-4 col-md-push-1">
 				<div class="header_form">
 					<div class="tabs">
@@ -28,24 +32,28 @@
 						<label for="registration" title="Регистрация">Регистрация</label>
 						<div class="clr"></div>
 						<section id="content-login">
-							<form action="" method="post" class="form_login">
+							<form action="{{route('signin')}}" method="post" class="form_login">
 								<input type="text" name="login" placeholder="Логин" required>
 								<input type="password" name="password" placeholder="Пароль" required>
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								<input type="submit" value="Войти">
 								<a href="">Забыли пароль?</a>
 							</form>
 						</section>  
 						<section id="content-registration">
-							<form action="/registration" method="get" class="form_reg">
+							<form action="{{route('registration')}}" method="post" class="form_reg">
 								<input type="text" name="login" placeholder="Логин" required>
 								<input type="password" name="password" placeholder="Пароль" required>
 								<input type="password" name="password-rep" placeholder="Повторите пароль" required>
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								<input type="submit" value="Продолжить">
 							</form>
 						</section> 
 					</div>
 				</div>
 			</div>
+
+			@endif
 		</div>
 	</div>
 </header>

@@ -20,11 +20,15 @@
 				<div class="col-xs-4 col-sm-6 visible-xs visible-sm">
 					<button>-</button>
 				</div>
-				<div class="col-md-4 hidden-sm hidden-xs">
+				<div class="col-md-5 hidden-sm hidden-xs">
 					<div class="main_menu">
 						<ul>
 							<li><a href="{{route('main_page')}}">Главная</a></li>
 							<li><a href="">Спецпредложения</a></li>
+							@if(Auth::user())
+							<li><a href="{{route('cabinet')}}">Личный кабинет</a></li>
+							<li><a class="btn_red" href="{{route('logout')}}">Выйти</a></li>
+							@endif
 						</ul>
 					</div>
 				</div>
@@ -38,7 +42,7 @@
 						</section>
 					</div>
 				</div>
-				<div class="col-md-3 hidden-sm hidden-xs">
+				<div class="col-md-2 hidden-sm hidden-xs">
 					<a href="" class="btn_deal">Подать объявление</a>
 				</div>
 			</div>
