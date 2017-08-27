@@ -1,4 +1,5 @@
 @import url(grid.css);
+@import url(select2.css);
 @import url(../fonts/roboto.css);
 * { margin: 0; padding: 0; }
 
@@ -74,5 +75,23 @@ header .col-md-6, header .col-md-4 { padding: 0; }
 .reg_form form input[type='submit']:hover { cursor: pointer; background-color: #1276c4; }
 .reg_form form label { font-size: 14px; }
 .reg_form form .sep { width: 100%; height: 2px; background-color: #f3f3f3; margin: 15px 0; }
+
+.cabinet { margin: 25px 0; }
+.cabinet .shadow { -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+.cabinet .btn_group .btn_add { display: inline-block; background-color: #57bb58; color: #fff; font-size: 12px; padding: 10px; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; }
+.cabinet .btn_group .btn_add:hover { background-color: #409f41; }
+.cabinet table { width: 100%; }
+.cabinet table tr th { font-size: 14px; }
+
+.deal_block { margin-top: 50px; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+.deal_block h3 { margin: 15px 0; }
+.deal_block form .input_group { margin: 25px auto; }
+.deal_block form .input_group label { display: inline-block; width: 275px; font-size: 14px; }
+.deal_block form .input_group select, .deal_block form .input_group input { width: 225px; }
+.deal_block form .input_group span { font-size: 12px; }
+.deal_block form .input_group input { padding-left: 8px; padding-right: 20px; height: 28px; border-radius: 4px; border: solid 1px #aaa; font-family: "Roboto"; }
+.deal_block form .input_group .min_input { width: 120px; margin: 0 15px; }
+.deal_block form .input_group input[type=checkbox] { height: 14px; width: 14px; }
+.deal_block form .input_group .mini_group { padding-left: 275px; margin: 15px 0; }
 
 /*# sourceMappingURL=main.css.map */

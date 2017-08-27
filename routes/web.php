@@ -48,10 +48,24 @@ Route::group(['middleware' => ['web', 'auth']], function()
 	Route::group(['prefix' => 'cabinet'], function()
 	{
 
-		Route::get('', [
-			'uses' => 'CabinetController@show',
+		Route::get('/', [
+			'uses' => 'CabinetController@index',
 			'as' => 'cabinet'
 			]);
+
+		Route::group(['prefix' => 'deal'], function()
+		{
+
+			Route::get('/', [
+				'uses' => 'DealController@index',
+				'as' => 'deal'
+				]);
+
+			Route::post('/', [
+				'uses' => 'DealController@add',
+				]);
+
+		});
 
 	});
 

@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-6 col-xs-8">
 					<div class="logo">
-						<a href="{{route('main_page')}}" title="kinnisvarateenus.ee"><img src="assets/img/logo.png" alt="kinnisvarateenue"></a>
+						<a href="{{route('main_page')}}" title="kinnisvarateenus.ee"><img src="{{ asset('/assets/img/logo.png') }}" alt="kinnisvarateenue"></a>
 					</div>
 				</div>
 				<div class="col-xs-4 col-sm-6 visible-xs visible-sm">
@@ -66,5 +66,7 @@
 			} );
 		})();
 	</script>
+
+	@yield('script')
 </body>
 </html>
